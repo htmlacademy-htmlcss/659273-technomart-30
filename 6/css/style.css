@@ -1,0 +1,435 @@
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+       url("../fonts/cuprum.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+       url("../fonts/cuprumitalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
+       url("../fonts/cuprumbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
+}
+
+/* Variabled */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-red: #EE3643;
+  --trans-white:rgb(255, 255, 255, 0.3);
+  --pale-blue:  #f4f7f9;
+  --dirty-blue: #32425C;
+  --basic-green: #63A63E;
+  --light-green: #8ED78F;
+  --basc-yellow: #FFC047;
+  --light-yellow: #FFBF47;
+  --pale-yellow: #F9F5F0;
+  --basic-turquoise: #3BBCE3;
+  --light-purple: #DC91D8;
+  --basic-gold: #FFD180;
+}
+
+/* Global */
+
+body {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--basic-black);
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  text-transform: uppercase;
+}
+
+.button_white {
+  font: inherit;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.button_red {
+  font: inherit;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  padding: 11px 46px 9px;
+}
+
+.button_trans-white {
+  font: inherit;
+  color: var(--basic-white);
+  background-color: var(--trans-white);
+  padding: 10px 24px;
+}
+
+.button_white:hover {
+  font: inherit;
+  color: var(--basic-red);
+}
+
+.main-header {
+  background-color: var(--pale-blue);
+}
+
+.header-menu {
+  background-color: var(--dirty-blue);
+}
+
+.header-menu h2{
+  display: none;
+}
+
+.header-menu a, .header-menu label{
+  color: var(--basic-white);
+}
+
+.header-menu__logo {
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  padding: 12px 56px 17px;
+}
+
+.header-menu__checkout {
+  background-color: var(--basic-green);
+  text-transform: uppercase;
+  padding: 9px 16px 9px 19px;
+}
+
+.header-info__description {
+  color: var(--basic-red);
+  font-style: italic;
+}
+
+.header-info__contact a {
+  color: var(--basic-red);
+}
+
+.header-nav {
+  background-color: var(--dirty-blue);
+}
+
+.header-nav__list {
+  list-style: none;
+}
+
+.header-nav__item a {
+  color: var(--basic-white);
+  font-size: 24px;
+}
+
+.header-nav__item a:hover {
+  background-color:var(--dirty-blue);
+}
+
+.offers h2{
+  display: none;
+}
+
+.offers__list {
+  list-style: none;
+}
+
+.offes__item h3 {
+  color: var(--basic-white);
+}
+
+.offes__item_yellow {
+  background-color: var(--light-yellow) ;
+}
+
+.offes__item_blue {
+  background-color: var(--basic-turquoise);
+}
+
+.offes__item_purple {
+  background-color: var(--light-purple);
+}
+
+.offes__item_green {
+  background-color: var(--light-green) ;
+}
+
+.offes__item_yellow-white {
+  background-color: var(--basc-yellow);
+}
+
+.slider__items{
+  list-style: none;
+}
+
+.slider__item {
+  padding: 23px 24px;
+  width: 620px;
+  height: 268px;
+  background-size: cover;
+}
+
+.slider__item h3{
+  text-transform: uppercase;
+  color: var(--basic-white);
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+
+}
+
+.slider__item p {
+  color: var(--basic-white);
+  font-size: 18px;
+}
+
+.slider__item_first {
+  background-image: url(../img/slider_1.jpg);
+}
+
+.slider__item_second {
+  display: none;
+  background-image: url(../img/slider_2.jpg);
+}
+
+.popular-goods__list {
+  list-style: none;
+}
+
+.product-item {
+  text-align: center;
+  display: block;
+}
+
+.product-item__header {
+  color: var(--basic-black);
+  size: 18px;
+  font-weight: 700;
+}
+
+.popular-goods__header {
+  background-color:var(--pale-yellow);
+}
+
+.popular-goods__header h2{
+  color: var(--dirty-blue);
+  font-size: 30px;
+}
+
+.product-item__cost span{
+  text-decoration: line-through;
+  font-size: 20px;
+  font-weight: 700px;
+}
+
+.popular-manufacturers__header {
+  background-color: var(--pale-yellow);
+}
+
+.popular-manufacturers__header h2{
+  background-color: var(--pale-yellow);
+  font-weight: 400;
+  color: var(--dirty-blue);
+  font-size: 30px;
+}
+
+.popular-manufacturers__list {
+  list-style: none;
+}
+
+.services {
+  background-color:var(--pale-blue);
+}
+
+.services h2{
+  color: var(--basic-black);
+  font-size: 30px;
+}
+
+.services p{
+  font-family: "PT Sans";
+  font-weight: 400;
+  color: var(--basic-black);
+  font-size: 13px;
+}
+
+.services__list-name{
+  list-style: none;
+}
+
+.services__list-name li{
+  background-color: var(--dirty-blue);
+  color: var(--basic-white);
+  font-weight: 700;
+}
+
+.services__list-name li:hover{
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.services__list {
+  list-style: none;
+}
+
+.services__item h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.services__item p {
+  font-family: "PT Sans";
+  font-weight: 400;
+}
+
+.about-company h2{
+  display: none;
+}
+
+.about-company h3{
+  font-size: 30px;
+}
+
+.about-company p{
+  font-family: "PT Sans";
+  font-size: 15px;
+}
+
+.about-company ul {
+  list-style: none;
+}
+
+.about-company li {
+  font-size: 18px;
+}
+
+.contacts h2{
+  font-size: 30px;
+}
+
+.contacts p{
+  font-size: 13px;
+  font-family: "PT Sans";
+
+}
+
+.main-footer {
+  background-color: var(--dirty-blue);
+}
+
+.footer-logo {
+  color: var(--basic-white);
+  font-size: 30px;
+  background-color: var(--basic-red);
+}
+
+.footer-nav__list {
+  list-style: none;
+}
+
+.footer-nav__item a {
+  font-size: 18px;
+  color: var(--pale-blue);
+}
+
+.footer-contacts {
+  color: var(--pale-blue);
+  font-size: 18px;
+}
+
+.footer-contacts  a{
+  text-decoration: none;
+  color: var(--pale-blue);
+}
+
+.footer-menu h3{
+  display: none;
+}
+
+.footer-menu__list {
+  list-style: none;
+}
+
+.footer-menu__item a {
+  color: var(--basic-gold);
+  font-size: 18px;
+}
+
+.footer-container {
+  background-color: var(--dirty-blue);
+}
+
+.footer-copyright {
+  color: var(--basic-white);
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-social h2 {
+  display: none;
+}
+
+/* Social button */
+
+.social-button {
+  color: inherit;
+  background-color: var(--dirty-blue);
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-red);
+}
+
+.footer-feedback, .footer-developer {
+  color: var(--basic-white);
+}
+
+.footer-feedback a , .footer-developer a{
+  color: var(--basic-gold);
+}
